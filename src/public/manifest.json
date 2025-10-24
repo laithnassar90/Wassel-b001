@@ -1,0 +1,65 @@
+{
+  "name": "Wassel - واصل",
+  "short_name": "Wassel",
+  "description": "Share Your Journey - Ride-sharing and carpooling platform for the Middle East",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#008080",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "transportation"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find a Ride",
+      "short_name": "Find Ride",
+      "description": "Search for available rides",
+      "url": "/app/find-ride",
+      "icons": [{ "src": "/icon-find.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Offer a Ride",
+      "short_name": "Offer Ride",
+      "description": "Post a new ride",
+      "url": "/app/offer-ride",
+      "icons": [{ "src": "/icon-offer.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "My Trips",
+      "short_name": "Trips",
+      "description": "View your trips",
+      "url": "/app/trips",
+      "icons": [{ "src": "/icon-trips.png", "sizes": "96x96" }]
+    }
+  ]
+}

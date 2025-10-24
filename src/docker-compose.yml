@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  wassel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wassel-app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - wassel-network
+
+  # Optional: Add Supabase local development
+  # postgres:
+  #   image: supabase/postgres:latest
+  #   environment:
+  #     POSTGRES_PASSWORD: your-super-secret-password
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     - wassel-network
+
+networks:
+  wassel-network:
+    driver: bridge
