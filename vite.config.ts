@@ -54,16 +54,17 @@ export default defineConfig({
   build: {
     target: 'esnext',
     outDir: 'build',
+    minify: true, // Optional: Ensures minification (default behavior)
   },
   server: {
-    host: '0.0.0.0', // Bind to all interfaces for Render
-    port: process.env.PORT || 3000, // Use Render's PORT or fallback to 3000
+    host: '0.0.0.0',
+    port: process.env.PORT || 3000,
     open: true,
-    allowedHosts: ['.onrender.com'], // Allow Render subdomains (e.g., wassel-cursor-agents-1.onrender.com)
+    allowedHosts: ['.onrender.com'],
   },
   preview: {
-    host: '0.0.0.0', // Also for preview mode
-    port: process.env.PORT || 3000, // Same for preview
-    allowedHosts: ['.onrender.com'], // Allow Render subdomains in preview too
+    host: '0.0.0.0',
+    port: process.env.PORT || 3000,
+    allowedHosts: ['.onrender.com'],
   },
 });
