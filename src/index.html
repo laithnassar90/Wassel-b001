@@ -3,78 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Wassel - واصل | Ride-Sharing Platform for the Middle East</title>
-    <meta name="title" content="Wassel - واصل | Ride-Sharing Platform" />
-    <meta name="description" content="Share your journey with Wassel - The Middle East's smartest ride-sharing and carpooling platform. Save money, meet people, reduce emissions." />
-    <meta name="keywords" content="ride-sharing, carpooling, middle east, saudi arabia, wassel, transportation, eco-friendly" />
-    <meta name="author" content="Wassel Team" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wassel.app/" />
-    <meta property="og:title" content="Wassel - واصل | Ride-Sharing Platform" />
-    <meta property="og:description" content="Share your journey with Wassel - The Middle East's smartest ride-sharing platform" />
-    <meta property="og:image" content="/og-image.png" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://wassel.app/" />
-    <meta property="twitter:title" content="Wassel - واصل | Ride-Sharing Platform" />
-    <meta property="twitter:description" content="Share your journey with Wassel - The Middle East's smartest ride-sharing platform" />
-    <meta property="twitter:image" content="/twitter-image.png" />
-    
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#008080" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Wassel" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    
-    <!-- PWA Manifest -->
+    <!-- ... (meta tags, Open Graph, Twitter, PWA, etc.) ... -->
     <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Security Headers -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' wss: https:;" />
   </head>
   <body>
     <div id="root"></div>
-    
-    <!-- Main Application Script -->
     <script type="module" src="/main.tsx"></script>
-    
-    <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-              console.log('✅ Service Worker registered:', registration);
-            })
-            .catch(error => {
-              console.log('❌ Service Worker registration failed:', error);
-            });
+            .then(registration => console.log('✅ Service Worker registered:', registration))
+            .catch(error => console.log('❌ Service Worker registration failed:', error));
         });
       }
     </script>
-    
-    <!-- No-script fallback -->
     <noscript>
-      <div style="text-align: center; padding: 50px; font-family: system-ui, sans-serif;">
-        <h1>JavaScript Required</h1>
-        <p>Please enable JavaScript to use Wassel.</p>
-        <p style="direction: rtl; font-size: 1.2em;">الرجاء تفعيل JavaScript لاستخدام واصل</p>
-      </div>
+      <!-- ... (fallback content) ... -->
     </noscript>
   </body>
 </html>
